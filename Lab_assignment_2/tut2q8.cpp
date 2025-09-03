@@ -7,34 +7,25 @@ int main(){
     int a;
     cin>>a;
 
-    int b[a],c[a];
+    int b[a];
 
     for (int d = 0; d < a; d++)
     {
         cout<<"enter the element "<<d+1<<" of the array : ";
         cin>>b[d];
     }
-
-    int e =0 ;
-    
-    for (int f = 0; f < a; f++)
-    { 
-      bool g = false;
-      for (int h = 0; h < e; h++)
-      {
-        if (b[f]==c[h])
-        {
-            g=true;
-            break;
+        for(int i=0;i<a;i++){
+            for(int j=i;j<a;j++){
+                if(b[i]>b[j]){
+                    swap(b[i],b[j]);
+                }
+            }
         }
-      }
-        if (g==false)
-        {
-            c[e]=b[f];
-            e++;
+        int c=0;
+        for(int i=0;i<a;i++){
+            if( b[i]!=b[i+1]){
+                c++;
+            }
         }
-    }
-    cout<<endl;
-    cout<<"the number of distinct elements in the array : "<<e;
-
+        cout<<"the no of distinct elements in the given array is "<<c<<endl;
 }
