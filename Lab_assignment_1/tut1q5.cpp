@@ -4,8 +4,6 @@ using namespace std;
 
 int main(){
 
-    // transpose of a matrix (rows and columns sum)
-
     int m,n;
     cout<<"enter the rows of array you want : ";
     cin>>m;
@@ -52,5 +50,7 @@ int main(){
         {
             s += a[j][i];
         }
+        cout<<"the sum of column "<<i+1<<" is : "<<s<<endl;
     }
 }
+
